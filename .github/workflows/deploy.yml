@@ -7,7 +7,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: production
+    environment:
+      name: production
     steps:
       - run: echo 'Hi ${{ env.REACT_APP_FIREBASE_API_KEY }}' # Hi Mona
       - name: Checkout 🛎️
