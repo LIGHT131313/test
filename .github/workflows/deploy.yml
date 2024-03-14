@@ -13,13 +13,10 @@ jobs:
 
       - name: Install, lint, build 🔧
         run: |
+          env
           npm install
           npm run lint:js
           npm run build
-        env:
-          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
-          REACT_APP_FIREBASE_AUTH_DOMAIN:
-            ${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
