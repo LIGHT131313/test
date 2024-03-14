@@ -1,4 +1,8 @@
 export const App = () => {
+  const envOne = process.env.REACT_APP_FIREBASE_API_KEY;
+  const envTwo = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN;
+
+
   return (
     <div
       style={{
@@ -10,7 +14,8 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      React homework template< br/> {envOne} < br/>
+      {envTwo}
     </div>
   );
 };
